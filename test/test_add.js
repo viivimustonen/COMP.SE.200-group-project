@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import add from '../add.js';
+import add from '../src/add.js';
 
 describe('add()', function() {
     // Test basic addition
