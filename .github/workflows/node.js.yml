@@ -35,4 +35,6 @@ jobs:
       uses: coverallsapp/github-action@v2.2.3
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Mark as Failed if Tests Failed
+      run: exit ${{ steps.test.outcome }}
             
