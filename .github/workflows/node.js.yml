@@ -29,12 +29,15 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm run test || true
+    - run: Run Tests
+      run: |
+        TEST_FAILURE=false
+        npm test || TEST_FAILURE=true
     - run: npm run coverage || true
     - name: Coveralls GitHub Action
       uses: coverallsapp/github-action@v2.2.3
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Mark as Failed if Tests Failed
-      run: exit ${{ steps.test.outcome }}
+      run: exit ${{ if ew(steps.Run Tests.outputs.TEST_FAILURE, 'true') }}
             
