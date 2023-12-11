@@ -25,8 +25,8 @@ describe('eq()', function() {
     // Test mixed types
     it('should return false for mixed types', function() {
         expect(eq('5', 5)).to.be.false;
-        //expect(eq(0, false)).to.be.false;
-        //expect(eq(1, true)).to.be.false;
+        expect(eq(0, false)).to.be.false;
+        expect(eq(1, true)).to.be.false;
         expect(eq('', false)).to.be.false;
         expect(eq('0', false)).to.be.false;
     });
