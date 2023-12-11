@@ -3,7 +3,7 @@ import toString from '../src/toString.js';
 
 describe('toString()', function() {
     // Test null input
-    /*it('should return an empty string for null', function() {
+    it('should return an empty string for null', function() {
         const result = toString(null);
         expect(result).to.equal('');
     });
@@ -12,7 +12,7 @@ describe('toString()', function() {
     it('should return an empty string for undefined', function() {
         const result = toString(undefined);
         expect(result).to.equal('');
-    });*/
+    });
 
     // Test string input
     it('should return the input string as is', function() {

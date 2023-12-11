@@ -3,7 +3,7 @@ import compact from '../src/compact.js';
 
 describe('compact()', function() {
     // Test compacting an array with various falsey values
-    /*it('should remove all falsey values from the array', function() {
+    it('should remove all falsey values from the array', function() {
         const inputArray = [0, 1, false, 2, '', 3, null, undefined, NaN];
         const result = compact(inputArray);
         console.log(result);
@@ -16,7 +16,7 @@ describe('compact()', function() {
         const result = compact(inputArray);
         console.log(result);
         expect(result).to.eql(inputArray);
-    });*/
+    });
 
     // Test compacting an array with only falsey values
     it('should return an empty array if all values are falsey', function() {
@@ -32,7 +32,7 @@ describe('compact()', function() {
     });
 
     // Test compacting an undefined array
-    /*it('should return an empty array for undefined input array', function() {
+    it('should return an empty array for undefined input array', function() {
         const result = compact(undefined);
         console.log(result);
         expect(result).to.eql([]);
@@ -52,5 +52,5 @@ describe('compact()', function() {
         const result = compact(inputArray);
         console.log(result);
         expect(result).to.eql([{ name: 'John' }, { age: 25 }]);
-    });*/
+    });
 });

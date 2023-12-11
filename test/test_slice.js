@@ -51,7 +51,7 @@ describe('slice()', function() {
     });
 
     // Test end out of bounds
-    /*it('should handle end out of bounds', function() {
+    it('should handle end out of bounds', function() {
         const array = [1, 2, 3, 4];
         console.log(slice(array, 1, 20))
         expect(slice(array, 1, 20)).to.eql([2, 3, 4]);
@@ -62,5 +62,5 @@ describe('slice()', function() {
         const array = [1, 2, 3, 4];
         console.log(slice(array, 10, 20))
         expect(slice(array, 10, 20)).to.eql([]);
-    });*/
+    });
 });
