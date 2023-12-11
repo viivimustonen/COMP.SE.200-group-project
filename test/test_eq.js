@@ -24,13 +24,13 @@ describe('eq()', function() {
 
     // Test mixed types
     it('should return false for mixed types', function() {
-        console.log(eq('5', 5));       // Log the actual result
+        console.log(eq(5, '5'));       // Log the actual result
         console.log(eq(0, false));     // Log the actual result
         console.log(eq(1, true));      // Log the actual result
         console.log(eq('', false));    // Log the actual result
         console.log(eq('0', false));   // Log the actual result
 
-        expect(eq('5', 5)).to.be.false;
+        expect(eq(5, '5')).to.be.false;
         expect(eq(0, false)).to.be.false;
         expect(eq(1, true)).to.be.false;
         expect(eq('', false)).to.be.false;

@@ -10,8 +10,8 @@ describe('slice()', function() {
 
     // Test negative start index
     it('should handle negative start index', function() {
-        const array = [1, 2, 3, 4];
-        expect(slice(array, -2)).to.eql([3, 4]);
+        const array = [1, 2, 3, 4, 5];
+        expect(slice(array, -2)).to.eql([4, 5]);
     });
 
     // Test negative end index
@@ -44,9 +44,23 @@ describe('slice()', function() {
         expect(slice(array, 2, 2)).to.eql([]);
     });
 
+    // Test start out of bounds
+    it('should handle start out of bounds', function() {
+        const array = [1, 2, 3, 4];
+        expect(slice(array, 10)).to.eql([]);
+    });
+
+    // Test end out of bounds
+    it('should handle end out of bounds', function() {
+        const array = [1, 2, 3, 4];
+        console.log(slice(array, 1, 20))
+        expect(slice(array, 1, 20)).to.eql([2, 3, 4]);
+    });
+
     // Test start and end out of bounds
     it('should handle start and end out of bounds', function() {
         const array = [1, 2, 3, 4];
+        console.log(slice(array, 10, 20))
         expect(slice(array, 10, 20)).to.eql([]);
     });
 });
