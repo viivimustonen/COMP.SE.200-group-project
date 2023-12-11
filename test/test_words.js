@@ -38,12 +38,6 @@ describe('words()', function() {
         expect(result).to.eql(['hello', 'world']);
     });
 
-    // Test non-string input
-    /*it('should return an empty array for non-string input', function() {
-        const result = words(123);
-        expect(result).to.eql([]);
-    });*/
-
     // Test pattern that does not match
     it('should return an empty array for a pattern that does not match', function() {
         const result = words('hello world', /notmatching/);
